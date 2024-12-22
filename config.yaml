@@ -1,0 +1,84 @@
+---
+
+# name of the folder where all output will be placed
+analysis_folder_name:
+ test_folder
+
+# name of the input folder for short reads, leave empty if not needed
+input_dir_short_reads:
+  input_short
+
+# name of the input folder for long reads, leave empty if not needed
+input_dir_long_reads:
+  input_long    
+
+# assembly mode choices
+# set to True or False
+assembly_mode:
+  megahit: False
+  metaspades: True
+  metaflye: False
+  hybrid_metaspades: False
+
+# Phred minimum quality score for short read and long read trimming:
+phred_minimum_quality_short_reads:
+phred_minimum_quality_long_reads: 
+
+# set to True if reads need to be trimmed and QC checked, else set to False
+qc_step:
+  False
+
+# define name of paired and unpaired reads if qc_step is set to False and paired and unpaired reads are both provided with names: e.g. "paired", "unpaired" or "P", "U" etc.
+# if only paired reads with specific naming will be provided, leave "unpaired_name" empty, 
+# if only paired reads with no specific naming will be provided, leave both empty
+# if only the unpaired reads have a specific naming, leave "paired_name" empty
+paired_reads:
+  paired_name: Paired
+  unpaired_name: U
+
+# name of the paired read id, e.g. "R1", "R2" or "forward", "reverse" etc.
+paired_read_ids:
+  forward: R1
+  reverse: R2
+
+# define the long read type  
+# Set to True or False, depending on the read type
+# the pipeline cannot proccess both types simultaneously
+long_read_type:
+  Nanopore: False
+  PacBio CLR: True
+  PacBio HiFi: False
+
+# list of paired-end short reads and long read files for hybrid assembly
+# file names of paired-end reads without extensions need to be inserted into the lists in the correct order as files at the same position will be assembled together
+# leave empty if not needed
+hybrid_assembly_pairs:
+  short_reads_forward: [reads_R1]
+  short_reads_reverse: [reads_R2]
+  long_reads: [long]
+
+# evalue filter for barrnap rRNA detection
+barrnap_evalue:
+  1e-10
+
+# number of file splits for the muilti-fasta contig files, set to 1 if splitting shouldn't be done
+num_of_file_splits:
+  2
+
+# evalue filter for hmmsearch against the GVDB
+hmmsearch_GVDB_evalue:
+  1e-5
+
+# evalue filter for hmmsearch aginast VOGDB
+hmmsearch_VOGDB_evalue:
+  1e-10
+
+# minimum contig length filter for the gv table
+# needs to be at least 1000
+min_length_contigs_for_gv_table:
+  5000
+
+# set to true to keep more output files, else set to False
+# intermediate files: original assembly output, trimmed reads, barrnap output gff, assembly files filtered out rRNA contigs, 
+keep_intermediate_files:
+  True
