@@ -1,7 +1,0 @@
----
-name: ucsc-fasplit-377
-channels:
- - bioconda
- - conda-forge
-dependencies:
- - ucsc-fasplit==377
