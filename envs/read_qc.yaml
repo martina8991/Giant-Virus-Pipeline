@@ -1,0 +1,11 @@
+---
+name: qc_tools
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - fastqc==0.12.1
+ - nanoplot==1.20.0
+ - fastp==0.23.4
+ - porechop==0.2.3_seqan2.1.1
+ - chopper==0.9.0

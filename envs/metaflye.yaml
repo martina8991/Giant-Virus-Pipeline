@@ -1,0 +1,7 @@
+---
+name: flye-2.9.3
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - flye==2.9.3
