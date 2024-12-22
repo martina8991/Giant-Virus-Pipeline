@@ -1,0 +1,92 @@
+---
+
+fastqc:
+  mem_mb: 5000
+  runtime: 2h
+  threads: 8
+  cpus_per_task: 8
+
+nanoplot:
+  mem_mb: 5000
+  runtime: 2h
+  threads: 8
+  cpus_per_task: 8
+
+fastp:
+  mem_mb: 10000
+  runtime: 3h
+  threads: 8
+  cpus_per_task: 8
+
+porechop:
+  mem_mb: 150000
+  runtime: 24h
+  threads: 16
+  cpus_per_task: 16
+
+chopper:
+  mem_mb: 40000
+  runtime: 24h
+  threads: 16
+  cpus_per_task: 16
+
+megahit:
+  mem_mb: 150000
+  runtime: 60h
+  threads: 16
+  cpus_per_task: 16
+
+metaspades:
+  mem_mb: 150000
+  runtime: 60h
+  threads: 16
+  cpus_per_task: 16
+
+metaflye:
+  mem_mb: 400000
+  runtime: 144h
+  threads: 16
+  cpus_per_task: 16
+
+hybrid_metaspades:
+  mem_mb: 500000
+  runtime: 72h
+  threads: 16
+  cpus_per_task: 16
+
+bowtie2:
+  mem_mb: 30000
+  runtime: 12h
+  threads: 16
+  cpus_per_task: 16
+
+minimap2:
+  mem_mb: 40000
+  runtime: 12h
+  threads: 8
+  cpus_per_task: 8
+
+barrnap:
+  mem_mb: 4000
+  runtime: 6h
+  threads: 8
+  cpus_per_task: 8
+
+prodigal:
+  mem_mb: 1000
+  runtime: 6h
+
+hmmsearch_GVDB:
+  mem_mb: 1000
+  runtime: 6h
+  threads: 2
+  cpus_per_task: 2
+
+
+hmmsearch_VOGDB:
+  mem_mb: 1000
+  runtime: 12h
+  threads: 2
+  cpus_per_task: 2
+
+
