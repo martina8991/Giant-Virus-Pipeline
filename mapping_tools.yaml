@@ -1,9 +1,0 @@
----
-name: mapping_tools
-channels:
- - bioconda
- - conda-forge
-dependencies:
- - minimap2==2.28
- - samtools==1.19.2
- - bowtie2==2.5.3
